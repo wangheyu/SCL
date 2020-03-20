@@ -1,3 +1,9 @@
+test.m : main D.n
+	./main 
+
+D.n : D.d
+	../easymesh/src/easymesh D.d
+
 main : Geometry.1d.o Geometry.2d.o Geometry.3d.o Geometry.o Miscellaneous.o EasyMesh.o main.cpp 
 	g++ -o main main.cpp Geometry.1d.o Geometry.2d.o Geometry.3d.o Geometry.o Miscellaneous.o EasyMesh.o -ldl
 
