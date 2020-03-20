@@ -1,0 +1,10 @@
+*.log
+*.pdf
+*.o
+*.e
+*.n
+*.s
+*.gz
+main
+Geometry/html
+Geometry/latex
