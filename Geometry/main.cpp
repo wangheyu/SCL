@@ -1,8 +1,11 @@
 #include "Geometry.h"
+#include "EasyMesh.h"
 
 
 int main(int argc, char *argv[])
 {
-    Mesh<2, 2> mesh;
+    EasyMesh mesh;
+    mesh.readData("D");
+    Mesh<2, 2> (mesh).writeData("E");
     return 0;
 };

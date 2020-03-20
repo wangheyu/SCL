@@ -1,5 +1,5 @@
-main : Geometry.1d.o Geometry.2d.o Geometry.3d.o Geometry.o Miscellaneous.o
-	g++ -o main main.cpp Geometry.1d.o Geometry.2d.o Geometry.3d.o Geometry.o Miscellaneous.o -ldl
+main : Geometry.1d.o Geometry.2d.o Geometry.3d.o Geometry.o Miscellaneous.o EasyMesh.o main.cpp 
+	g++ -o main main.cpp Geometry.1d.o Geometry.2d.o Geometry.3d.o Geometry.o Miscellaneous.o EasyMesh.o -ldl
 
 Geometry.1d.o : Geometry.1d.cpp
 	g++ -c Geometry.1d.cpp
@@ -15,6 +15,9 @@ Geometry.o : Geometry.cpp
 
 Miscellaneous.o : Miscellaneous.cpp
 	g++ -c Miscellaneous.cpp
+
+EasyMesh.o : EasyMesh.cpp
+	g++ -c EasyMesh.cpp
 
 clean:
 	rm *.o
