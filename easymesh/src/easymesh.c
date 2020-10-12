@@ -658,7 +658,7 @@ new_node()
  if(side[elem[ugly].si].mark > 0)    {s=elem[ugly].si; n=elem[ugly].i;}
  if(side[elem[ugly].sj].mark > 0)    {s=elem[ugly].sj; n=elem[ugly].j;}
  if(side[elem[ugly].sk].mark > 0)    {s=elem[ugly].sk; n=elem[ugly].k;}
- if(s==OFF) return;
+ if(s==OFF) return 0;
 
  xM  = 0.5*(node[side[s].c].x + node[side[s].d].x);
  yM  = 0.5*(node[side[s].c].y + node[side[s].d].y);
@@ -700,7 +700,7 @@ new_node()
        circles(e);
   }
 */
- return;
+ return 0;
 }
 /*-new_node----------------------------------------------------------------*/
 
